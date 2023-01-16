@@ -1,7 +1,15 @@
 import React from 'react';
 
+import QuotesList from '../components/QuotesList';
+import SearchForm from '../components/SearchForm';
+
 const home = () => {
-  return <div>home</div>;
+  return (
+    <main>
+      <QuotesList />
+      <SearchForm />
+    </main>
+  );
 };
 
 export default home;
