@@ -1,13 +1,14 @@
 import React from 'react';
 import HomeCards from './HomeCards';
 import Loading from './Loading';
+import { nanoid } from 'nanoid';
 
 const CharacterGrid = (props) => {
   const { isLoading, items, text } = props;
   return isLoading ? (
     <Loading />
   ) : (
-    <section className='home-card'>
+    <>
       {items
         .filter((item) =>
           text === ''
@@ -15,9 +16,9 @@ const CharacterGrid = (props) => {
             : item.name.toLowerCase().includes(text.toLowerCase())
         )
         .map((item) => (
-          <HomeCards item={item}></HomeCards>
+          <HomeCards key={nanoid()} item={item}></HomeCards>
         ))}
-    </section>
+    </>
   );
 };
 

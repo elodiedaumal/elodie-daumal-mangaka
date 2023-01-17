@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaWarehouse } from 'react-icons/fa';
-import Loading from '../components/Loading';
 
 const SingleCaracterCard = ({
   name,
