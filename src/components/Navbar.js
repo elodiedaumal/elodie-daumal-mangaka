@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className='navbar-position'>
         <Link to='/' className='logo'>
-          MangaKa
+          Rick an Morty
         </Link>
         <ul className='nav-links'>
           <li>

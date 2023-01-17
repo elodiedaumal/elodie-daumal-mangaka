@@ -14,7 +14,7 @@ function App() {
         <Route path='/' element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
-          <Route path='manga/:id' element={<SingleCaracter />} />
+          <Route path='character/:name' element={<SingleCaracter />} />
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>
