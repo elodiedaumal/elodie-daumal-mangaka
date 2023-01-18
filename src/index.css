@@ -134,6 +134,7 @@ a {
     align-items: center;
     padding: 1rem;
     justify-content: space-between;
+    height: 55px;
   }
 
   .nav-toggle {

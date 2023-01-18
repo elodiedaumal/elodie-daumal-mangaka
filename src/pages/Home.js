@@ -29,7 +29,6 @@ function Home() {
 
   useEffect(() => {
     const fetchItems = async () => {
-      let page = 1;
       const result = await axios(
         `https://rickandmortyapi.com/api/character/?page=1`
       );

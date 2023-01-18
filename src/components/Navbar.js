@@ -38,34 +38,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        {/* <ul className='social-icons'>
-          {social.map((socialIcon) => {
-            const { id, url, icon } = socialIcon;
-            return (
-              <li key={id}>
-                <a href={url}>{icon}</a>
-              </li>
-            );
-          })}
-        </ul> */}
       </div>
-    </nav>
-  );
-  return (
-    <nav className='navbar'>
-      <div className='navbar-position'>
-        <Link to='/' className='logo'>
-          Rick and Morty
-        </Link>
-      </div>
-      <ul className='nav-links'>
-        <li>
-          <Link to='/'>Home</Link>
-        </li>
-        <li>
-          <Link to='/About'>About</Link>
-        </li>
-      </ul>
     </nav>
   );
 };
