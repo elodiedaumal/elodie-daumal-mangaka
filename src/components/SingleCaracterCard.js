@@ -17,7 +17,7 @@ const SingleCaracterCard = ({
     }
     return 'alive';
   }
-  console.log(status);
+
   return (
     <>
       <article className='card'>

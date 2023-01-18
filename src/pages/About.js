@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className='section'>
+    <div className='section-about'>
       <h1 className='title'>About MangaKa</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, commodi.
@@ -19,7 +19,9 @@ const About = () => {
         praesentium accusantium saepe, rem quibusdam provident esse facilis
         voluptatibus dolorem quas?
       </p>
-      <Link to='/'>Back to Home</Link>
+      <div className='about-link'>
+        <Link to='/'>Back to Home</Link>
+      </div>
     </div>
   );
 };

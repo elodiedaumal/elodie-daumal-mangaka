@@ -120,7 +120,8 @@ a {
 }
 
 .title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* LOADING ANIMATION */
@@ -521,4 +522,25 @@ a {
   width: 60%;
   margin: auto;
   outline: none;
+}
+
+/* SECTION ABOUT */
+
+.section-about {
+  color: white;
+  max-width: 1200px;
+  margin: 5rem auto;
+}
+
+.about-link {
+  text-align: center;
+
+  margin-top: 2rem;
+}
+
+.about-link a {
+  color: #5d9b0a;
+  font-size: 1.5rem;
+
+  font-weight: bold;
 }
