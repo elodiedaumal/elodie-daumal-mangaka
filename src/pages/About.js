@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <div className='section-about'>
-      <h1 className='title'>About MangaKa</h1>
+      <h1 className='title'>About Rick and Morty</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, commodi.
         Corrupti quas porro neque, dolore distinctio sint! Asperiores laborum
