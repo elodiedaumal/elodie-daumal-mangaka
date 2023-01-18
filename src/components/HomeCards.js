@@ -5,8 +5,8 @@ const HomeCards = (props) => {
   return (
     <Link className='home-card-container' to={`/character/${props.item.name}`}>
       <div className='home-card-container'>
-        <div className='home-card-inner'>
-          <div className='home-card-front'>
+        <div className='home-card-container home-card-inner'>
+          <div className='home-card-image'>
             {props.item.image ? (
               <img src={props.item.image} alt={props.item.name} />
             ) : (
@@ -17,14 +17,14 @@ const HomeCards = (props) => {
             )}
           </div>
 
-          <div className='home-card-back'>
+          <div className='home-card-info'>
             <h1>{props.item.name}</h1>
             <ul>
               <li>
                 <strong>{props.item.species}</strong>
               </li>
               <li>
-                <strong>{props.item.Gender}</strong>
+                <strong>{props.item.gender}</strong>
               </li>
             </ul>
           </div>

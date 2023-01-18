@@ -26,7 +26,6 @@ function Home() {
   const [items19, setItems19] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [text, setText] = useState('');
-  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -38,7 +37,6 @@ function Home() {
       //we've got the data, so we put setIsLoading as false.
       setItems(result.data.results);
       setIsLoading(false);
-      setPage(page + 1);
     };
 
     fetchItems();
@@ -279,7 +277,7 @@ function Home() {
   }, []);
 
   return (
-    <main>
+    <main className='home-section'>
       <SearchForm text={text} setText={setText} />
       <section className='home-card'>
         <CharacterGrid isLoading={isLoading} items={items} text={text} />

@@ -11,13 +11,20 @@ const SingleCaracterCard = ({
   origin,
   status,
 }) => {
+  function isAlive() {
+    if (status.includes('ead')) {
+      return 'dead';
+    }
+    return 'alive';
+  }
+  console.log(status);
   return (
     <>
       <article className='card'>
         <div className='product-details'>
           <h1>{name}</h1>
 
-          <p className='alive'>{status}</p>
+          <p className={isAlive()}>{status}</p>
 
           <div className='control'>
             <Link to='/'>
