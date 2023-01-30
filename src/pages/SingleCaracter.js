@@ -21,7 +21,7 @@ const SingleCaracter = (props) => {
     };
 
     fetchCharacter();
-  }, []);
+  });
 
   return isLoading ? (
     <Loading />
