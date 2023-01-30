@@ -18,10 +18,17 @@ function Home() {
       const result = await axios(
         `https://rickandmortyapi.com/api/character/${urlPage}`
       );
+      if (page === 1) {
+        setItems(() => {
+          return [...result.data.results];
+        });
+      }
+      if (page > 1) {
+        setItems((oldItems) => {
+          return [...oldItems, ...result.data.results];
+        });
+      }
 
-      setItems((oldItems) => {
-        return [...oldItems, ...result.data.results];
-      });
       setPage((oldPage) => {
         console.log(page);
         return oldPage + 1;
