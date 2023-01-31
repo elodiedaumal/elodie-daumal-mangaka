@@ -3,6 +3,8 @@
   --smallWidth: 85vw;
   --maxWidth: 40rem;
   --fullWidth: 1170px;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
 }
 
 .dark-theme {
@@ -12,6 +14,7 @@
   --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
   --mainGrey: #ececec;
+  --bcg: #333;
   --darkGrey: #333;
   --mainRed: #bd0303;
   --black: #000;
@@ -21,8 +24,7 @@
   --mainGreen: green;
 
   --lightWite: rgba(255, 255, 255, 0.9);
-  --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
+
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -37,10 +39,12 @@
   --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --darkGrey: #ececec;
-  --homeCard: #5d9b0a;
-  --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
+  --bcg: #ececec;
+  --darkGrey: #333;
+  --homeCard: rgb(255, 255, 255, 0);
+  --navGreen: #c6c6c6;
+  --navLogo: #222;
+  --mainGreen: green;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -54,7 +58,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: var(--mainBlack);
-  background: var(--darkGrey);
+  background: var(--bcg);
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
@@ -223,7 +227,7 @@ a {
   height: 16px;
   margin: 3px 6px;
   border-radius: 50%;
-  background-color: var(--mainBlack);
+  background-color: var(--bcg);
   opacity: 1;
   animation: bouncing-loader 1s infinite normal;
 }
@@ -518,9 +522,6 @@ a {
 
 .home-section {
   max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -580,6 +581,11 @@ a {
 .search {
   margin-top: 2rem;
   text-align: center;
+  display: flex;
+  row-gap: 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 15px;
 }
 
 .search input {
@@ -588,9 +594,26 @@ a {
   font-size: 20px;
   border: 0;
   border-radius: 5px;
-  width: 60%;
+  width: 100%;
   margin: auto;
   outline: none;
+}
+
+.form-control {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .search {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+    margin-bottom: 25px;
+  }
+  .form-control {
+    width: 70%;
+  }
 }
 
 /* SECTION ABOUT */
@@ -621,7 +644,7 @@ a {
   border: 2px solid var(--homeCard);
   padding: 0.5rem 1rem;
   border-radius: 5px;
-
+  /* width: 30%; */
   text-transform: capitalize;
   transition: all 0.3s linear;
   font-weight: bold;
