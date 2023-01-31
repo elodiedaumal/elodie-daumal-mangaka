@@ -22,7 +22,7 @@
   --navLogo: #efee39;
   --homeCard: #5d9b0a;
   --mainGreen: green;
-
+  --text: #f7f7f7;
   --lightWite: rgba(255, 255, 255, 0.9);
 
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -45,6 +45,7 @@
   --navGreen: #c6c6c6;
   --navLogo: #222;
   --mainGreen: green;
+  --text: #222;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -619,7 +620,7 @@ a {
 /* SECTION ABOUT */
 
 .section-about {
-  color: var(--mainWhite);
+  color: var(--text);
   max-width: 1200px;
   margin: 5rem auto;
   padding: 10px;
