@@ -1,5 +1,34 @@
 :root {
-  --primaryLightColor: #d4e6a5;
+  --mainBorderRadius: 0.25rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --fullWidth: 1170px;
+}
+
+.dark-theme {
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBackground: #f1f5f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #333;
+  --mainRed: #bd0303;
+  --black: #000;
+  --navGreen: #6cc420;
+  --navLogo: #efee39;
+  --homeCard: #5d9b0a;
+  --mainGreen: green;
+
+  --lightWite: rgba(255, 255, 255, 0.9);
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.light-theme {
+  --primaryLightColor: #e6a5a5;
   --primaryColor: #476a2e;
   --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
@@ -8,16 +37,12 @@
   --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --darkGrey: #afafaf;
-  --mainRed: #bd0303;
+  --darkGrey: #ececec;
+  --homeCard: #5d9b0a;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-  --mainBorderRadius: 0.25rem;
-  --smallWidth: 85vw;
-  --maxWidth: 40rem;
-  --fullWidth: 1170px;
 }
 
 body {
@@ -29,7 +54,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: var(--mainBlack);
-  background: #333;
+  background: var(--darkGrey);
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
@@ -54,14 +79,14 @@ a {
 
 .nav-toggle {
   font-size: 1.5rem;
-  color: black;
+  color: var(--mainBlack);
   background: transparent;
   border-color: transparent;
   transition: all 0.3s linear;
   cursor: pointer;
 }
 .nav-toggle:hover {
-  color: black;
+  color: var(--mainBlack);
   transform: rotate(90deg);
 }
 
@@ -75,7 +100,7 @@ a {
 }
 
 .navbar {
-  background-color: #6cc420;
+  background-color: var(--navGreen);
   padding: 10px;
   box-shadow: var(--darkShadow);
 }
@@ -89,7 +114,7 @@ a {
 
 .logo {
   font-size: 2rem;
-  color: #efee39;
+  color: var(--navLogo);
   font-weight: bold;
 }
 
@@ -107,7 +132,7 @@ a {
   display: block;
   padding: 0.5rem 1rem;
   font-weight: 700;
-  color: #222;
+  color: var(--mainBlack);
 }
 .nav-links a:hover {
   padding-left: 1.5rem;
@@ -198,7 +223,7 @@ a {
   height: 16px;
   margin: 3px 6px;
   border-radius: 50%;
-  background-color: #222;
+  background-color: var(--mainBlack);
   opacity: 1;
   animation: bouncing-loader 1s infinite normal;
 }
@@ -225,8 +250,8 @@ a {
 /* SINGLE CARACTER CARDS */
 
 .card {
-  box-shadow: 0 15px 30px 1px black;
-  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 30px 1px var(--black);
+  background: var(--lightWite);
   text-align: center;
   border-radius: 5px;
   overflow: hidden;
@@ -239,7 +264,7 @@ a {
   display: inline-block;
   position: relative;
   font-size: 30px;
-  color: #344055;
+  color: var(--mainBlack);
   margin: 0;
 }
 
@@ -372,19 +397,6 @@ a {
   transform: scale(1.2, 1.2);
 }
 
-.info li::before {
-  content: '';
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  background-image: url('./images/img1.png');
-  z-index: 999;
-  border-radius: 50%;
-  background-size: contain;
-  margin-right: 10px;
-  margin-top: 5px;
-}
-
 @media (min-width: 750px) {
   .card {
     box-shadow: 0 15px 30px 1px black;
@@ -412,7 +424,7 @@ a {
     display: inline-block;
     position: relative;
     font-size: 30px;
-    color: #344055;
+    color: var(--mainBlack);
     margin: 0;
   }
 
@@ -523,11 +535,11 @@ a {
 }
 
 .home-card-container {
-  border: 5px groove #5d9b0a;
+  border: 15px groove var(--homeCard);
   box-shadow: var(--lightShadow);
   border-radius: 5px;
-  background-color: white;
-  color: #333333;
+  background-color: var(--mainWhite);
+  color: var(--darkGrey);
   margin: 0 auto;
 }
 
@@ -543,7 +555,7 @@ a {
 }
 
 .home-card-container:visited {
-  color: green;
+  color: var(--mainGreen);
 }
 
 @media (min-width: 700px) {
@@ -584,7 +596,7 @@ a {
 /* SECTION ABOUT */
 
 .section-about {
-  color: white;
+  color: var(--mainWhite);
   max-width: 1200px;
   margin: 5rem auto;
   padding: 10px;
@@ -597,8 +609,22 @@ a {
 }
 
 .about-link a {
-  color: #5d9b0a;
+  color: var(--homeCard);
   font-size: 1.5rem;
 
   font-weight: bold;
+}
+
+.btn-theme {
+  background: var(--offWhite);
+  color: var(--darkGrey);
+  border: 2px solid var(--homeCard);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+  cursor: pointer;
 }

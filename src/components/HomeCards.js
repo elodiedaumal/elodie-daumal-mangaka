@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const HomeCards = (props) => {
   return (
     <Link className='home-card-container' to={`/character/${props.item.name}`}>
-      <div className='home-card-container'>
-        <div className='home-card-container home-card-inner'>
+      <div className=''>
+        <div className=' home-card-inner'>
           <div className='home-card-image'>
             {props.item.image ? (
               <img src={props.item.image} alt={props.item.name} />
