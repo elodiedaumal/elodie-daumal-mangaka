@@ -24,7 +24,7 @@
   --mainGreen: green;
   --text: #f7f7f7;
   --lightWite: rgba(255, 255, 255, 0.9);
-
+  --loading: #f7f7f7;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -46,6 +46,7 @@
   --navGreen: #c6c6c6;
   --navLogo: #222;
   --mainGreen: green;
+  --loading: #222;
   --text: #222;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
@@ -218,10 +219,15 @@ a {
   margin: -30px 10px 0px 0px;
   font-size: 3rem;
 }
+.section-loader {
+  grid-column: 1 / span 3;
+}
 
 .bouncing-loader {
   display: flex;
   justify-content: center;
+  color: var(--loading);
+  margin: 25px auto;
 }
 
 .bouncing-loader > div {
@@ -229,7 +235,7 @@ a {
   height: 16px;
   margin: 3px 6px;
   border-radius: 50%;
-  background-color: var(--black);
+  background-color: var(--loading);
   opacity: 1;
   animation: bouncing-loader 1s infinite normal;
 }

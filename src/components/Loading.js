@@ -2,7 +2,7 @@ import React from 'react';
 
 const Loading = () => {
   return (
-    <section className='section'>
+    <section className='section-loader'>
       <div className='bouncing-loader'>
         <h1 className='loading'>Loading </h1>
         <div></div>
