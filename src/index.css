@@ -41,6 +41,7 @@
   --mainGrey: #ececec;
   --bcg: #ececec;
   --darkGrey: #333;
+  --black: #000;
   --homeCard: rgb(255, 255, 255, 0);
   --navGreen: #c6c6c6;
   --navLogo: #222;
@@ -228,7 +229,7 @@ a {
   height: 16px;
   margin: 3px 6px;
   border-radius: 50%;
-  background-color: var(--bcg);
+  background-color: var(--black);
   opacity: 1;
   animation: bouncing-loader 1s infinite normal;
 }
